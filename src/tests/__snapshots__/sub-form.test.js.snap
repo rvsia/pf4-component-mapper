@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubForm component should render SubForm correctly 1`] = `
+<Fragment>
+  <Title
+    className=""
+    size="xl"
+  >
+    cosiTitle
+  </Title>
+  <Grid
+    className=""
+    gutter="md"
+    lg={null}
+    md={null}
+    sm={null}
+    span={null}
+    xl={null}
+  >
+    <div>
+      Here would be form
+    </div>
+  </Grid>
+</Fragment>
+`;
+
+exports[`SubForm component should render SubForm with description correctly 1`] = `
+<Fragment>
+  <Title
+    className=""
+    size="xl"
+  >
+    cosiTitle
+  </Title>
+  <TextContent
+    className=""
+  >
+    <Text
+      className=""
+      component="small"
+      style={
+        Object {
+          "marginBottom": 0,
+        }
+      }
+    >
+      description here!
+    </Text>
+  </TextContent>
+  <Grid
+    className=""
+    gutter="md"
+    lg={null}
+    md={null}
+    sm={null}
+    span={null}
+    xl={null}
+  >
+    <div>
+      Here would be form
+    </div>
+  </Grid>
+</Fragment>
+`;
+
+exports[`SubForm component should render SubForm without title correctly 1`] = `
+<Fragment>
+  <Grid
+    className=""
+    gutter="md"
+    lg={null}
+    md={null}
+    sm={null}
+    span={null}
+    xl={null}
+  >
+    <div>
+      Here would be form
+    </div>
+  </Grid>
+</Fragment>
+`;
