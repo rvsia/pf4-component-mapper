@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs component should render tabs correctly 1`] = `
+<Fragment
+  key="cosiKey"
+>
+  <Title
+    className=""
+    size="3xl"
+  >
+    cosiTitle
+  </Title>
+  <Grid
+    className=""
+    gutter="md"
+    lg={null}
+    md={null}
+    sm={null}
+    span={null}
+    xl={null}
+  >
+    <div>
+      Here would be form
+    </div>
+  </Grid>
+</Fragment>
+`;
