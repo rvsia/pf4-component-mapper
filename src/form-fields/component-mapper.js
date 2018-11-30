@@ -11,6 +11,7 @@ import {
   DatePickerField,
   TimePickerField,
 } from './form-fields';
+import Wizard from './wizard/wizard';
 
 const mapper = {
   [componentTypes.TEXT_FIELD]: TextField,
@@ -23,6 +24,7 @@ const mapper = {
   [componentTypes.DATE_PICKER]: DatePickerField,
   [componentTypes.TIME_PICKER]: TimePickerField,
   [componentTypes.TAG_CONTROL]: props => <div>Unsupported tag control</div>,
+  [componentTypes.WIZARD]: Wizard,
 };
 
 export default mapper;
