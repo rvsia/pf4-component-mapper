@@ -6,11 +6,13 @@ import miqSchema from './demo-schemas/miq-schema';
 import { uiArraySchema, arraySchema, schema, uiSchema, conditionalSchema } from './demo-schemas/widget-schema';
 import { formFieldsMapper, layoutMapper } from '../src';
 import { Title, Button, Toolbar, ToolbarGroup, ToolbarItem } from '@patternfly/react-core';
+import { wizardSchema } from './demo-schemas/wizard-schema';
 
+const Summary = props => <div>Custom summary component.</div>;
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { schema: miqSchema, schemaString: 'miq', ui: uiArraySchema };
+        this.state = { schema: wizardSchema, schemaString: 'default' };
     }
 
     render() {
@@ -18,6 +20,9 @@ class App extends React.Component {
         <div style={{ maxWidth: 800, marginLeft: 'auto', marginRight: 'auto' }}>
             <Title size="4xl">Pf4 component mapper</Title>
             <Toolbar style={{ marginBottom: 20, marginTop: 20 }}>
+                <ToolbarGroup>
+                    <Button onClick={() => this.setState(state => ({ schema: wizardSchema, schemaString: 'default' }))}>Wizard</Button>
+                </ToolbarGroup>
                 <ToolbarGroup>
                     <Button onClick={() => this.setState(state => ({ schema: arraySchema, schemaString: 'mozilla', ui: uiArraySchema}))}>arraySchema</Button>
                 </ToolbarGroup>
@@ -34,7 +39,11 @@ class App extends React.Component {
             <FormRenderer
                 onSubmit={console.log}
                 schemaType={this.state.schemaString}
-                formFieldsMapper={formFieldsMapper}
+                formFieldsMapper={{
+                    ...formFieldsMapper,
+                    summary: Summary
+                }}
+                onCancel={() => console.log('Cancel action')}
                 layoutMapper={layoutMapper}
                 schema={this.state.schema}
                 uiSchema={this.state.ui}
