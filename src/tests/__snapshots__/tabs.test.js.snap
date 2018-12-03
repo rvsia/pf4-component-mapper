@@ -10,18 +10,8 @@ exports[`Tabs component should render tabs correctly 1`] = `
   >
     cosiTitle
   </Title>
-  <Grid
-    className=""
-    gutter="md"
-    lg={null}
-    md={null}
-    sm={null}
-    span={null}
-    xl={null}
-  >
-    <div>
-      Here would be form
-    </div>
-  </Grid>
+  <div>
+    Here would be form
+  </div>
 </Fragment>
 `;

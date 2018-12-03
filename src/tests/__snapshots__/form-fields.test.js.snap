@@ -54,69 +54,46 @@ exports[`FormFields should render Checkbox correctly 1`] = `
       }
       name="Name of the field"
     >
-      <GridItem
+      <FormGroup
         className=""
-        lg={null}
-        lgOffset={null}
-        lgRowSpan={null}
-        md={null}
-        mdOffset={null}
-        mdRowSpan={null}
-        offset={null}
-        rowSpan={null}
-        sm={null}
-        smOffset={null}
-        smRowSpan={null}
-        span={12}
-        xl={null}
-        xlOffset={null}
-        xlRowSpan={null}
+        fieldId="someIdKey"
+        helperTextInvalid={false}
+        isInline={false}
+        isRequired={false}
+        isValid={true}
       >
         <div
-          className="pf-l-grid__item pf-m-12-col"
+          className="pf-c-form__group"
         >
-          <FormGroup
+          <Checkbox
+            aria-label="Name of the field"
             className=""
-            fieldId="someIdKey"
-            helperTextInvalid={false}
-            isInline={false}
-            isRequired={false}
+            id="someIdKey"
+            isChecked={null}
+            isDisabled={false}
             isValid={true}
+            name="Name of the field"
+            onChange={[Function]}
+            value=""
           >
             <div
-              className="pf-c-form__group"
+              className="pf-c-check"
             >
-              <Checkbox
+              <input
+                aria-invalid={false}
                 aria-label="Name of the field"
-                className=""
+                className="pf-c-check__input"
+                disabled={false}
                 id="someIdKey"
-                isChecked={null}
-                isDisabled={false}
-                isValid={true}
                 name="Name of the field"
                 onChange={[Function]}
+                type="checkbox"
                 value=""
-              >
-                <div
-                  className="pf-c-check"
-                >
-                  <input
-                    aria-invalid={false}
-                    aria-label="Name of the field"
-                    className="pf-c-check__input"
-                    disabled={false}
-                    id="someIdKey"
-                    name="Name of the field"
-                    onChange={[Function]}
-                    type="checkbox"
-                    value=""
-                  />
-                </div>
-              </Checkbox>
+              />
             </div>
-          </FormGroup>
+          </Checkbox>
         </div>
-      </GridItem>
+      </FormGroup>
     </FinalFormField>
   </FieldInterface>
 </CheckboxField>
@@ -457,69 +434,46 @@ exports[`FormFields should render DatePicker correctly 1`] = `
     name="Name of the field"
     type="date"
   >
-    <GridItem
+    <FormGroup
       className=""
-      lg={null}
-      lgOffset={null}
-      lgRowSpan={null}
-      md={null}
-      mdOffset={null}
-      mdRowSpan={null}
-      offset={null}
-      rowSpan={null}
-      sm={null}
-      smOffset={null}
-      smRowSpan={null}
-      span={12}
-      xl={null}
-      xlOffset={null}
-      xlRowSpan={null}
+      fieldId="someIdKey"
+      helperTextInvalid={false}
+      isInline={false}
+      isRequired={false}
+      isValid={true}
     >
       <div
-        className="pf-l-grid__item pf-m-12-col"
+        className="pf-c-form__group"
       >
-        <FormGroup
+        <TextInput
+          aria-label={null}
           className=""
-          fieldId="someIdKey"
-          helperTextInvalid={false}
-          isInline={false}
+          id="someIdKey"
+          isDisabled={false}
+          isReadOnly={false}
           isRequired={false}
           isValid={true}
+          name="Name of the field"
+          onChange={[Function]}
+          type="date"
+          value=""
         >
-          <div
-            className="pf-c-form__group"
-          >
-            <TextInput
-              aria-label={null}
-              className=""
-              id="someIdKey"
-              isDisabled={false}
-              isReadOnly={false}
-              isRequired={false}
-              isValid={true}
-              name="Name of the field"
-              onChange={[Function]}
-              type="date"
-              value=""
-            >
-              <input
-                aria-invalid={false}
-                aria-label={null}
-                className="pf-c-form-control"
-                disabled={false}
-                id="someIdKey"
-                name="Name of the field"
-                onChange={[Function]}
-                readOnly={false}
-                required={false}
-                type="date"
-                value=""
-              />
-            </TextInput>
-          </div>
-        </FormGroup>
+          <input
+            aria-invalid={false}
+            aria-label={null}
+            className="pf-c-form-control"
+            disabled={false}
+            id="someIdKey"
+            name="Name of the field"
+            onChange={[Function]}
+            readOnly={false}
+            required={false}
+            type="date"
+            value=""
+          />
+        </TextInput>
       </div>
-    </GridItem>
+    </FormGroup>
   </FieldInterface>
 </DatePickerField>
 `;
@@ -593,168 +547,145 @@ exports[`FormFields should render Radio correctly 1`] = `
       ]
     }
   >
-    <GridItem
+    <FormGroup
       className=""
-      lg={null}
-      lgOffset={null}
-      lgRowSpan={null}
-      md={null}
-      mdOffset={null}
-      mdRowSpan={null}
-      offset={null}
-      rowSpan={null}
-      sm={null}
-      smOffset={null}
-      smRowSpan={null}
-      span={12}
-      xl={null}
-      xlOffset={null}
-      xlRowSpan={null}
+      fieldId="someIdKey"
+      helperTextInvalid={false}
+      isInline={false}
+      isRequired={false}
+      isValid={true}
     >
       <div
-        className="pf-l-grid__item pf-m-12-col"
+        className="pf-c-form__group"
       >
-        <FormGroup
-          className=""
-          fieldId="someIdKey"
-          helperTextInvalid={false}
-          isInline={false}
-          isRequired={false}
-          isValid={true}
+        <FieldProvider
+          key="Name of the field-1"
+          name="Name of the field"
+          render={[Function]}
+          type="radio"
+          value="1"
         >
-          <div
-            className="pf-c-form__group"
-          >
-            <FieldProvider
-              key="Name of the field-1"
-              name="Name of the field"
-              render={[Function]}
-              type="radio"
-              value="1"
+          <div>
+            <Radio
+              aria-label="One"
+              className=""
+              id="Foo-1"
+              isChecked={null}
+              isDisabled={false}
+              isValid={true}
+              label="One"
+              name="Foo"
+              onChange={[Function]}
             >
-              <div>
-                <Radio
+              <div
+                className="pf-c-check"
+              >
+                <input
+                  aria-invalid={false}
                   aria-label="One"
-                  className=""
+                  className="pf-c-check__input"
+                  disabled={false}
                   id="Foo-1"
-                  isChecked={null}
-                  isDisabled={false}
-                  isValid={true}
-                  label="One"
                   name="Foo"
                   onChange={[Function]}
+                  type="radio"
+                />
+                <label
+                  className="pf-c-check__label"
+                  htmlFor="Foo-1"
                 >
-                  <div
-                    className="pf-c-check"
-                  >
-                    <input
-                      aria-invalid={false}
-                      aria-label="One"
-                      className="pf-c-check__input"
-                      disabled={false}
-                      id="Foo-1"
-                      name="Foo"
-                      onChange={[Function]}
-                      type="radio"
-                    />
-                    <label
-                      className="pf-c-check__label"
-                      htmlFor="Foo-1"
-                    >
-                      One
-                    </label>
-                  </div>
-                </Radio>
+                  One
+                </label>
               </div>
-            </FieldProvider>
-            <FieldProvider
-              key="Name of the field-2"
-              name="Name of the field"
-              render={[Function]}
-              type="radio"
-              value="2"
-            >
-              <div>
-                <Radio
-                  aria-label="Two"
-                  className=""
-                  id="Foo-2"
-                  isChecked={null}
-                  isDisabled={false}
-                  isValid={true}
-                  label="Two"
-                  name="Foo"
-                  onChange={[Function]}
-                >
-                  <div
-                    className="pf-c-check"
-                  >
-                    <input
-                      aria-invalid={false}
-                      aria-label="Two"
-                      className="pf-c-check__input"
-                      disabled={false}
-                      id="Foo-2"
-                      name="Foo"
-                      onChange={[Function]}
-                      type="radio"
-                    />
-                    <label
-                      className="pf-c-check__label"
-                      htmlFor="Foo-2"
-                    >
-                      Two
-                    </label>
-                  </div>
-                </Radio>
-              </div>
-            </FieldProvider>
-            <FieldProvider
-              key="Name of the field-3"
-              name="Name of the field"
-              render={[Function]}
-              type="radio"
-              value="3"
-            >
-              <div>
-                <Radio
-                  aria-label="Three"
-                  className=""
-                  id="Foo-3"
-                  isChecked={null}
-                  isDisabled={false}
-                  isValid={true}
-                  label="Three"
-                  name="Foo"
-                  onChange={[Function]}
-                >
-                  <div
-                    className="pf-c-check"
-                  >
-                    <input
-                      aria-invalid={false}
-                      aria-label="Three"
-                      className="pf-c-check__input"
-                      disabled={false}
-                      id="Foo-3"
-                      name="Foo"
-                      onChange={[Function]}
-                      type="radio"
-                    />
-                    <label
-                      className="pf-c-check__label"
-                      htmlFor="Foo-3"
-                    >
-                      Three
-                    </label>
-                  </div>
-                </Radio>
-              </div>
-            </FieldProvider>
+            </Radio>
           </div>
-        </FormGroup>
+        </FieldProvider>
+        <FieldProvider
+          key="Name of the field-2"
+          name="Name of the field"
+          render={[Function]}
+          type="radio"
+          value="2"
+        >
+          <div>
+            <Radio
+              aria-label="Two"
+              className=""
+              id="Foo-2"
+              isChecked={null}
+              isDisabled={false}
+              isValid={true}
+              label="Two"
+              name="Foo"
+              onChange={[Function]}
+            >
+              <div
+                className="pf-c-check"
+              >
+                <input
+                  aria-invalid={false}
+                  aria-label="Two"
+                  className="pf-c-check__input"
+                  disabled={false}
+                  id="Foo-2"
+                  name="Foo"
+                  onChange={[Function]}
+                  type="radio"
+                />
+                <label
+                  className="pf-c-check__label"
+                  htmlFor="Foo-2"
+                >
+                  Two
+                </label>
+              </div>
+            </Radio>
+          </div>
+        </FieldProvider>
+        <FieldProvider
+          key="Name of the field-3"
+          name="Name of the field"
+          render={[Function]}
+          type="radio"
+          value="3"
+        >
+          <div>
+            <Radio
+              aria-label="Three"
+              className=""
+              id="Foo-3"
+              isChecked={null}
+              isDisabled={false}
+              isValid={true}
+              label="Three"
+              name="Foo"
+              onChange={[Function]}
+            >
+              <div
+                className="pf-c-check"
+              >
+                <input
+                  aria-invalid={false}
+                  aria-label="Three"
+                  className="pf-c-check__input"
+                  disabled={false}
+                  id="Foo-3"
+                  name="Foo"
+                  onChange={[Function]}
+                  type="radio"
+                />
+                <label
+                  className="pf-c-check__label"
+                  htmlFor="Foo-3"
+                >
+                  Three
+                </label>
+              </div>
+            </Radio>
+          </div>
+        </FieldProvider>
       </div>
-    </GridItem>
+    </FormGroup>
   </FieldInterface>
 </RadioField>
 `;
@@ -826,113 +757,90 @@ exports[`FormFields should render Select correctly 1`] = `
       ]
     }
   >
-    <GridItem
+    <FormGroup
       className=""
-      lg={null}
-      lgOffset={null}
-      lgRowSpan={null}
-      md={null}
-      mdOffset={null}
-      mdRowSpan={null}
-      offset={null}
-      rowSpan={null}
-      sm={null}
-      smOffset={null}
-      smRowSpan={null}
-      span={12}
-      xl={null}
-      xlOffset={null}
-      xlRowSpan={null}
+      fieldId="someIdKey"
+      helperTextInvalid={false}
+      isInline={false}
+      isRequired={false}
+      isValid={true}
     >
       <div
-        className="pf-l-grid__item pf-m-12-col"
+        className="pf-c-form__group"
       >
-        <FormGroup
+        <Select
+          aria-label={null}
           className=""
-          fieldId="someIdKey"
-          helperTextInvalid={false}
-          isInline={false}
-          isRequired={false}
+          id="someIdKey"
+          isDisabled={false}
           isValid={true}
+          name="Name of the field"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value=""
         >
-          <div
-            className="pf-c-form__group"
+          <select
+            aria-invalid={false}
+            aria-label={null}
+            className="pf-c-form-control"
+            disabled={false}
+            id="someIdKey"
+            name="Name of the field"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            value=""
           >
-            <Select
-              aria-label={null}
+            <SelectOption
               className=""
-              id="someIdKey"
               isDisabled={false}
-              isValid={true}
-              name="Name of the field"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              value=""
+              key="1"
+              label="One"
+              value="1"
             >
-              <select
-                aria-invalid={false}
-                aria-label={null}
-                className="pf-c-form-control"
+              <option
+                className=""
                 disabled={false}
-                id="someIdKey"
-                name="Name of the field"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                value=""
+                value="1"
               >
-                <SelectOption
-                  className=""
-                  isDisabled={false}
-                  key="1"
-                  label="One"
-                  value="1"
-                >
-                  <option
-                    className=""
-                    disabled={false}
-                    value="1"
-                  >
-                    One
-                  </option>
-                </SelectOption>
-                <SelectOption
-                  className=""
-                  isDisabled={false}
-                  key="2"
-                  label="Two"
-                  value="2"
-                >
-                  <option
-                    className=""
-                    disabled={false}
-                    value="2"
-                  >
-                    Two
-                  </option>
-                </SelectOption>
-                <SelectOption
-                  className=""
-                  isDisabled={false}
-                  key="3"
-                  label="Three"
-                  value="3"
-                >
-                  <option
-                    className=""
-                    disabled={false}
-                    value="3"
-                  >
-                    Three
-                  </option>
-                </SelectOption>
-              </select>
-            </Select>
-          </div>
-        </FormGroup>
+                One
+              </option>
+            </SelectOption>
+            <SelectOption
+              className=""
+              isDisabled={false}
+              key="2"
+              label="Two"
+              value="2"
+            >
+              <option
+                className=""
+                disabled={false}
+                value="2"
+              >
+                Two
+              </option>
+            </SelectOption>
+            <SelectOption
+              className=""
+              isDisabled={false}
+              key="3"
+              label="Three"
+              value="3"
+            >
+              <option
+                className=""
+                disabled={false}
+                value="3"
+              >
+                Three
+              </option>
+            </SelectOption>
+          </select>
+        </Select>
       </div>
-    </GridItem>
+    </FormGroup>
   </FieldInterface>
 </SelectField>
 `;
@@ -972,63 +880,40 @@ exports[`FormFields should render TextArea correctly 1`] = `
     }
     name="Name of the field"
   >
-    <GridItem
+    <FormGroup
       className=""
-      lg={null}
-      lgOffset={null}
-      lgRowSpan={null}
-      md={null}
-      mdOffset={null}
-      mdRowSpan={null}
-      offset={null}
-      rowSpan={null}
-      sm={null}
-      smOffset={null}
-      smRowSpan={null}
-      span={12}
-      xl={null}
-      xlOffset={null}
-      xlRowSpan={null}
+      fieldId="someIdKey"
+      helperTextInvalid={false}
+      isInline={false}
+      isRequired={false}
+      isValid={true}
     >
       <div
-        className="pf-l-grid__item pf-m-12-col"
+        className="pf-c-form__group"
       >
-        <FormGroup
+        <TextArea
+          aria-label={null}
           className=""
-          fieldId="someIdKey"
-          helperTextInvalid={false}
-          isInline={false}
+          id="someIdKey"
           isRequired={false}
           isValid={true}
+          name="Name of the field"
+          onChange={[Function]}
+          value=""
         >
-          <div
-            className="pf-c-form__group"
-          >
-            <TextArea
-              aria-label={null}
-              className=""
-              id="someIdKey"
-              isRequired={false}
-              isValid={true}
-              name="Name of the field"
-              onChange={[Function]}
-              value=""
-            >
-              <textarea
-                aria-invalid={false}
-                aria-label={null}
-                className="pf-c-form-control"
-                id="someIdKey"
-                name="Name of the field"
-                onChange={[Function]}
-                required={false}
-                value=""
-              />
-            </TextArea>
-          </div>
-        </FormGroup>
+          <textarea
+            aria-invalid={false}
+            aria-label={null}
+            className="pf-c-form-control"
+            id="someIdKey"
+            name="Name of the field"
+            onChange={[Function]}
+            required={false}
+            value=""
+          />
+        </TextArea>
       </div>
-    </GridItem>
+    </FormGroup>
   </FieldInterface>
 </TextAreaField>
 `;
@@ -1068,69 +953,46 @@ exports[`FormFields should render TextField correctly 1`] = `
     }
     name="Name of the field"
   >
-    <GridItem
+    <FormGroup
       className=""
-      lg={null}
-      lgOffset={null}
-      lgRowSpan={null}
-      md={null}
-      mdOffset={null}
-      mdRowSpan={null}
-      offset={null}
-      rowSpan={null}
-      sm={null}
-      smOffset={null}
-      smRowSpan={null}
-      span={12}
-      xl={null}
-      xlOffset={null}
-      xlRowSpan={null}
+      fieldId="someIdKey"
+      helperTextInvalid={false}
+      isInline={false}
+      isRequired={false}
+      isValid={true}
     >
       <div
-        className="pf-l-grid__item pf-m-12-col"
+        className="pf-c-form__group"
       >
-        <FormGroup
+        <TextInput
+          aria-label={null}
           className=""
-          fieldId="someIdKey"
-          helperTextInvalid={false}
-          isInline={false}
+          id="someIdKey"
+          isDisabled={false}
+          isReadOnly={false}
           isRequired={false}
           isValid={true}
+          name="Name of the field"
+          onChange={[Function]}
+          type="text"
+          value=""
         >
-          <div
-            className="pf-c-form__group"
-          >
-            <TextInput
-              aria-label={null}
-              className=""
-              id="someIdKey"
-              isDisabled={false}
-              isReadOnly={false}
-              isRequired={false}
-              isValid={true}
-              name="Name of the field"
-              onChange={[Function]}
-              type="text"
-              value=""
-            >
-              <input
-                aria-invalid={false}
-                aria-label={null}
-                className="pf-c-form-control"
-                disabled={false}
-                id="someIdKey"
-                name="Name of the field"
-                onChange={[Function]}
-                readOnly={false}
-                required={false}
-                type="text"
-                value=""
-              />
-            </TextInput>
-          </div>
-        </FormGroup>
+          <input
+            aria-invalid={false}
+            aria-label={null}
+            className="pf-c-form-control"
+            disabled={false}
+            id="someIdKey"
+            name="Name of the field"
+            onChange={[Function]}
+            readOnly={false}
+            required={false}
+            type="text"
+            value=""
+          />
+        </TextInput>
       </div>
-    </GridItem>
+    </FormGroup>
   </FieldInterface>
 </TextField>
 `;
@@ -1172,98 +1034,65 @@ exports[`FormFields should render TextField with description correctly 1`] = `
     }
     name="Name of the field"
   >
-    <GridItem
+    <FormGroup
       className=""
-      lg={null}
-      lgOffset={null}
-      lgRowSpan={null}
-      md={null}
-      mdOffset={null}
-      mdRowSpan={null}
-      offset={null}
-      rowSpan={null}
-      sm={null}
-      smOffset={null}
-      smRowSpan={null}
-      span={12}
-      xl={null}
-      xlOffset={null}
-      xlRowSpan={null}
+      fieldId="someIdKey"
+      helperTextInvalid={false}
+      isInline={false}
+      isRequired={false}
+      isValid={true}
     >
       <div
-        className="pf-l-grid__item pf-m-12-col"
+        className="pf-c-form__group"
       >
-        <FormGroup
+        <TextContent
           className=""
-          fieldId="someIdKey"
-          helperTextInvalid={false}
-          isInline={false}
-          isRequired={false}
-          isValid={true}
         >
           <div
-            className="pf-c-form__group"
+            className="pf-c-content"
           >
-            <TextContent
+            <Text
               className=""
+              component="small"
             >
-              <div
-                className="pf-c-content"
+              <small
+                className=""
+                data-pf-content={true}
               >
-                <Text
-                  className=""
-                  component="small"
-                  style={
-                    Object {
-                      "marginBottom": 0,
-                    }
-                  }
-                >
-                  <small
-                    className=""
-                    data-pf-content={true}
-                    style={
-                      Object {
-                        "marginBottom": 0,
-                      }
-                    }
-                  >
-                    This is description
-                  </small>
-                </Text>
-              </div>
-            </TextContent>
-            <TextInput
-              aria-label={null}
-              className=""
-              id="someIdKey"
-              isDisabled={false}
-              isReadOnly={false}
-              isRequired={false}
-              isValid={true}
-              name="Name of the field"
-              onChange={[Function]}
-              type="text"
-              value=""
-            >
-              <input
-                aria-invalid={false}
-                aria-label={null}
-                className="pf-c-form-control"
-                disabled={false}
-                id="someIdKey"
-                name="Name of the field"
-                onChange={[Function]}
-                readOnly={false}
-                required={false}
-                type="text"
-                value=""
-              />
-            </TextInput>
+                This is description
+              </small>
+            </Text>
           </div>
-        </FormGroup>
+        </TextContent>
+        <TextInput
+          aria-label={null}
+          className=""
+          id="someIdKey"
+          isDisabled={false}
+          isReadOnly={false}
+          isRequired={false}
+          isValid={true}
+          name="Name of the field"
+          onChange={[Function]}
+          type="text"
+          value=""
+        >
+          <input
+            aria-invalid={false}
+            aria-label={null}
+            className="pf-c-form-control"
+            disabled={false}
+            id="someIdKey"
+            name="Name of the field"
+            onChange={[Function]}
+            readOnly={false}
+            required={false}
+            type="text"
+            value=""
+          />
+        </TextInput>
       </div>
-    </GridItem>
+    </FormGroup>
   </FieldInterface>
 </TextField>
 `;
@@ -1301,69 +1130,46 @@ exports[`FormFields should render TextField without id correctly 1`] = `
     }
     name="Name of the field"
   >
-    <GridItem
+    <FormGroup
       className=""
-      lg={null}
-      lgOffset={null}
-      lgRowSpan={null}
-      md={null}
-      mdOffset={null}
-      mdRowSpan={null}
-      offset={null}
-      rowSpan={null}
-      sm={null}
-      smOffset={null}
-      smRowSpan={null}
-      span={12}
-      xl={null}
-      xlOffset={null}
-      xlRowSpan={null}
+      fieldId="Name of the field"
+      helperTextInvalid={false}
+      isInline={false}
+      isRequired={false}
+      isValid={true}
     >
       <div
-        className="pf-l-grid__item pf-m-12-col"
+        className="pf-c-form__group"
       >
-        <FormGroup
+        <TextInput
+          aria-label={null}
           className=""
-          fieldId="Name of the field"
-          helperTextInvalid={false}
-          isInline={false}
+          id="Name of the field"
+          isDisabled={false}
+          isReadOnly={false}
           isRequired={false}
           isValid={true}
+          name="Name of the field"
+          onChange={[Function]}
+          type="text"
+          value=""
         >
-          <div
-            className="pf-c-form__group"
-          >
-            <TextInput
-              aria-label={null}
-              className=""
-              id="Name of the field"
-              isDisabled={false}
-              isReadOnly={false}
-              isRequired={false}
-              isValid={true}
-              name="Name of the field"
-              onChange={[Function]}
-              type="text"
-              value=""
-            >
-              <input
-                aria-invalid={false}
-                aria-label={null}
-                className="pf-c-form-control"
-                disabled={false}
-                id="Name of the field"
-                name="Name of the field"
-                onChange={[Function]}
-                readOnly={false}
-                required={false}
-                type="text"
-                value=""
-              />
-            </TextInput>
-          </div>
-        </FormGroup>
+          <input
+            aria-invalid={false}
+            aria-label={null}
+            className="pf-c-form-control"
+            disabled={false}
+            id="Name of the field"
+            name="Name of the field"
+            onChange={[Function]}
+            readOnly={false}
+            required={false}
+            type="text"
+            value=""
+          />
+        </TextInput>
       </div>
-    </GridItem>
+    </FormGroup>
   </FieldInterface>
 </TextField>
 `;
@@ -1404,69 +1210,46 @@ exports[`FormFields should render TimePicker correctly 1`] = `
     name="Name of the field"
     type="time"
   >
-    <GridItem
+    <FormGroup
       className=""
-      lg={null}
-      lgOffset={null}
-      lgRowSpan={null}
-      md={null}
-      mdOffset={null}
-      mdRowSpan={null}
-      offset={null}
-      rowSpan={null}
-      sm={null}
-      smOffset={null}
-      smRowSpan={null}
-      span={12}
-      xl={null}
-      xlOffset={null}
-      xlRowSpan={null}
+      fieldId="someIdKey"
+      helperTextInvalid={false}
+      isInline={false}
+      isRequired={false}
+      isValid={true}
     >
       <div
-        className="pf-l-grid__item pf-m-12-col"
+        className="pf-c-form__group"
       >
-        <FormGroup
+        <TextInput
+          aria-label={null}
           className=""
-          fieldId="someIdKey"
-          helperTextInvalid={false}
-          isInline={false}
+          id="someIdKey"
+          isDisabled={false}
+          isReadOnly={false}
           isRequired={false}
           isValid={true}
+          name="Name of the field"
+          onChange={[Function]}
+          type="time"
+          value=""
         >
-          <div
-            className="pf-c-form__group"
-          >
-            <TextInput
-              aria-label={null}
-              className=""
-              id="someIdKey"
-              isDisabled={false}
-              isReadOnly={false}
-              isRequired={false}
-              isValid={true}
-              name="Name of the field"
-              onChange={[Function]}
-              type="time"
-              value=""
-            >
-              <input
-                aria-invalid={false}
-                aria-label={null}
-                className="pf-c-form-control"
-                disabled={false}
-                id="someIdKey"
-                name="Name of the field"
-                onChange={[Function]}
-                readOnly={false}
-                required={false}
-                type="time"
-                value=""
-              />
-            </TextInput>
-          </div>
-        </FormGroup>
+          <input
+            aria-invalid={false}
+            aria-label={null}
+            className="pf-c-form-control"
+            disabled={false}
+            id="someIdKey"
+            name="Name of the field"
+            onChange={[Function]}
+            readOnly={false}
+            required={false}
+            type="time"
+            value=""
+          />
+        </TextInput>
       </div>
-    </GridItem>
+    </FormGroup>
   </FieldInterface>
 </TimePickerField>
 `;
@@ -1506,69 +1289,46 @@ exports[`FormFields should render touched TextField id correctly 1`] = `
     }
     name="Name of the field"
   >
-    <GridItem
+    <FormGroup
       className=""
-      lg={null}
-      lgOffset={null}
-      lgRowSpan={null}
-      md={null}
-      mdOffset={null}
-      mdRowSpan={null}
-      offset={null}
-      rowSpan={null}
-      sm={null}
-      smOffset={null}
-      smRowSpan={null}
-      span={12}
-      xl={null}
-      xlOffset={null}
-      xlRowSpan={null}
+      fieldId="someIdKey"
+      helperTextInvalid={false}
+      isInline={false}
+      isRequired={false}
+      isValid={true}
     >
       <div
-        className="pf-l-grid__item pf-m-12-col"
+        className="pf-c-form__group"
       >
-        <FormGroup
+        <TextInput
+          aria-label={null}
           className=""
-          fieldId="someIdKey"
-          helperTextInvalid={false}
-          isInline={false}
+          id="someIdKey"
+          isDisabled={false}
+          isReadOnly={false}
           isRequired={false}
           isValid={true}
+          name="Name of the field"
+          onChange={[Function]}
+          type="text"
+          value=""
         >
-          <div
-            className="pf-c-form__group"
-          >
-            <TextInput
-              aria-label={null}
-              className=""
-              id="someIdKey"
-              isDisabled={false}
-              isReadOnly={false}
-              isRequired={false}
-              isValid={true}
-              name="Name of the field"
-              onChange={[Function]}
-              type="text"
-              value=""
-            >
-              <input
-                aria-invalid={false}
-                aria-label={null}
-                className="pf-c-form-control"
-                disabled={false}
-                id="someIdKey"
-                name="Name of the field"
-                onChange={[Function]}
-                readOnly={false}
-                required={false}
-                type="text"
-                value=""
-              />
-            </TextInput>
-          </div>
-        </FormGroup>
+          <input
+            aria-invalid={false}
+            aria-label={null}
+            className="pf-c-form-control"
+            disabled={false}
+            id="someIdKey"
+            name="Name of the field"
+            onChange={[Function]}
+            readOnly={false}
+            required={false}
+            type="text"
+            value=""
+          />
+        </TextInput>
       </div>
-    </GridItem>
+    </FormGroup>
   </FieldInterface>
 </TextField>
 `;

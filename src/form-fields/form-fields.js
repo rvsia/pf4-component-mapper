@@ -8,7 +8,6 @@ import {
   SelectOption,
   Checkbox,
   TextArea,
-  GridItem,
   FormGroup,
   TextContent,
   Text,
@@ -62,19 +61,17 @@ const FinalFormField = ({
   const showError = touched && error;
 
   return (
-    <GridItem span={ 12 } >
-      <FormGroup
-        isRequired={ isRequired }
-        label={ !hideLabel && label }
-        fieldId={ rest.id }
-        isValid={ !showError }
-        helperText={ helperText }
-        helperTextInvalid={ meta.error }
-      >
-        { description && <TextContent><Text component={ TextVariants.small } style={{ marginBottom: 0 }}>{ description }</Text></TextContent> }
-        { selectComponent({ componentType, label, ...rest, isValid: !showError })() }
-      </FormGroup>
-    </GridItem>
+    <FormGroup
+      isRequired={ isRequired }
+      label={ !hideLabel && label }
+      fieldId={ rest.id }
+      isValid={ !showError }
+      helperText={ helperText }
+      helperTextInvalid={ meta.error }
+    >
+      { description && <TextContent><Text component={ TextVariants.small }>{ description }</Text></TextContent> }
+      { selectComponent({ componentType, label, ...rest, isValid: !showError })() }
+    </FormGroup>
   );
 };
 
