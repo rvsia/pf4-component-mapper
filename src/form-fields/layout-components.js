@@ -1,13 +1,26 @@
 import React from 'react';
 import { layoutComponents } from '@data-driven-forms/react-form-renderer';
-import { Form, GridItem, Button, ActionGroup, Grid } from '@patternfly/react-core';
+import { Form, Toolbar, ToolbarGroup, ToolbarItem, Button, ActionGroup, Grid } from '@patternfly/react-core';
 import { PlusIcon, CloseIcon } from '@patternfly/react-icons';
+import './layout-components-styles.scss';
 
 const Icon = ({ name }) => name === 'close' ? <CloseIcon /> : <PlusIcon />;
-const ButtonLayout = ({ label, bsStyle, children, ...props }) => <Button variant={ bsStyle } { ...props }>{ label }{ children }</Button>;
-const ColLayout = ({ children, xs }) => <GridItem span={ xs || 12 } >{ children }</GridItem>;
-const ButtonGroupLayout = ({ children, ...props }) => <ActionGroup style={{ marginTop: 0 }} { ...props } >{ children }</ActionGroup>;
-const ArrayFieldLayout = ({ children, ...props }) => <Grid gutter="md" { ...props } >{ children }</Grid>;
+const ButtonLayout = ({ label, bsStyle, children, ...props }) =>
+  <ToolbarGroup>
+    <ToolbarItem>
+      <Button variant={ bsStyle } { ...props }>
+        { label }{ children }
+      </Button>
+    </ToolbarItem>
+  </ToolbarGroup>;
+const ColLayout = ({ children }) => <React.Fragment>{ children }</React.Fragment>;
+const ButtonGroupLayout = ({ children, ...props }) =>
+  <ActionGroup { ...props } >
+    <Toolbar>
+      { children }
+    </Toolbar>
+  </ActionGroup>;
+const ArrayFieldLayout = ({ children, ...props }) => <Grid className="field-array" { ...props } >{ children }</Grid>;
 const HelpBlockLayout = ({ children, ...props }) => <div { ...props } style={{ color: '#a30000' }} >{ children }</div>;
 
 const layoutMapper = {

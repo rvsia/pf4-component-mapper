@@ -8,19 +8,9 @@ exports[`SubForm component should render SubForm correctly 1`] = `
   >
     cosiTitle
   </Title>
-  <Grid
-    className=""
-    gutter="md"
-    lg={null}
-    md={null}
-    sm={null}
-    span={null}
-    xl={null}
-  >
-    <div>
-      Here would be form
-    </div>
-  </Grid>
+  <div>
+    Here would be form
+  </div>
 </Fragment>
 `;
 
@@ -47,36 +37,16 @@ exports[`SubForm component should render SubForm with description correctly 1`] 
       description here!
     </Text>
   </TextContent>
-  <Grid
-    className=""
-    gutter="md"
-    lg={null}
-    md={null}
-    sm={null}
-    span={null}
-    xl={null}
-  >
-    <div>
-      Here would be form
-    </div>
-  </Grid>
+  <div>
+    Here would be form
+  </div>
 </Fragment>
 `;
 
 exports[`SubForm component should render SubForm without title correctly 1`] = `
 <Fragment>
-  <Grid
-    className=""
-    gutter="md"
-    lg={null}
-    md={null}
-    sm={null}
-    span={null}
-    xl={null}
-  >
-    <div>
-      Here would be form
-    </div>
-  </Grid>
+  <div>
+    Here would be form
+  </div>
 </Fragment>
 `;
