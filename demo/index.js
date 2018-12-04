@@ -7,12 +7,13 @@ import { uiArraySchema, arraySchema, schema, uiSchema, conditionalSchema } from 
 import { formFieldsMapper, layoutMapper } from '../src';
 import { Title, Button, Toolbar, ToolbarGroup, ToolbarItem } from '@patternfly/react-core';
 import { wizardSchema } from './demo-schemas/wizard-schema';
+import sandboxSchema from './demo-schemas/sandbox';
 
 const Summary = props => <div>Custom summary component.</div>;
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { schema: wizardSchema, schemaString: 'default' };
+        this.state = { schema: wizardSchema, schemaString: 'default', sandbox: false };
     }
 
     render() {
@@ -24,30 +25,33 @@ class App extends React.Component {
                     <Button onClick={() => this.setState(state => ({ schema: wizardSchema, schemaString: 'default' }))}>Wizard</Button>
                 </ToolbarGroup>
                 <ToolbarGroup>
-                    <Button onClick={() => this.setState(state => ({ schema: arraySchema, schemaString: 'mozilla', ui: uiArraySchema}))}>arraySchema</Button>
+                    <Button onClick={() => this.setState(state => ({ schema: arraySchema, schemaString: 'mozilla', ui: uiArraySchema}))}>ArraySchema</Button>
                 </ToolbarGroup>
                 <ToolbarGroup>
-                    <Button onClick={() => this.setState(state => ({ schema: schema, schemaString: 'mozilla', ui: uiSchema}))}>schema</Button>
+                    <Button onClick={() => this.setState(state => ({ schema: schema, schemaString: 'mozilla', ui: uiSchema}))}>Schema</Button>
                 </ToolbarGroup>
                 <ToolbarGroup>
-                    <Button onClick={() => this.setState(state => ({ schema: miqSchema, schemaString: 'miq'}))}>miq</Button>
+                    <Button onClick={() => this.setState(state => ({ schema: miqSchema, schemaString: 'miq'}))}>MIQ</Button>
                 </ToolbarGroup>
                 <ToolbarGroup>
-                    <Button onClick={() => this.setState(state => ({ schema: conditionalSchema, schemaString: 'mozilla', ui: uiSchema}))}>conditional</Button>
+                    <Button onClick={() => this.setState(state => ({ schema: conditionalSchema, schemaString: 'mozilla', ui: uiSchema}))}>Conditional</Button>
+                </ToolbarGroup>
+                <ToolbarGroup>
+                    <Button onClick={() => this.setState(state => ({ schema: sandboxSchema, schemaString: 'default', ui: uiSchema }))}>Sandbox</Button>
                 </ToolbarGroup>
             </Toolbar>
-            <FormRenderer
-                onSubmit={console.log}
-                schemaType={this.state.schemaString}
-                formFieldsMapper={{
-                    ...formFieldsMapper,
-                    summary: Summary
-                }}
-                onCancel={() => console.log('Cancel action')}
-                layoutMapper={layoutMapper}
-                schema={this.state.schema}
-                uiSchema={this.state.ui}
-            />
+                <FormRenderer
+                    onSubmit={console.log}
+                    schemaType={this.state.schemaString && this.state.schemaString}
+                    formFieldsMapper={{
+                        ...formFieldsMapper,
+                        summary: Summary
+                    }}
+                    onCancel={() => console.log('Cancel action')}
+                    layoutMapper={layoutMapper}
+                    schema={this.state.schema}
+                    uiSchema={this.state.ui}
+                />
         </div>
     </div>)
     };
