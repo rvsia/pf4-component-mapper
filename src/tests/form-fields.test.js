@@ -1,6 +1,6 @@
 import React from 'react';
 import toJson from 'enzyme-to-json';
-import { TextField, TextAreaField, CheckboxField, RadioField, SelectField, TimePickerField, DatePickerField } from '../form-fields/form-fields';
+import { TextField, TextAreaField, CheckboxField, RadioField, SelectField, TimePickerField, DatePickerField, SwitchField } from '../form-fields/form-fields';
 import { mount } from 'enzyme';
 
 const FieldProvider = ({ render, ...props }) => <div>{ render({ input: { name: 'Foo', onChange: jest.fn() }, meta: { error: false, touched: false }, ...props }) }</div>;
@@ -106,6 +106,27 @@ describe('FormFields', () => {
   it('should render TimePicker correctly', () => {
     const wrapper = mount(
       <TimePickerField { ...props } />
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('should render Switch correctly', () => {
+    const wrapper = mount(
+      <SwitchField { ...props } FieldProvider={ FieldProvider } />
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('should render disabled Switch correctly', () => {
+    const wrapper = mount(
+      <SwitchField { ...props } isDisabled={ true } FieldProvider={ FieldProvider }/>
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('should render disabled Switch correctly', () => {
+    const wrapper = mount(
+      <SwitchField { ...props } isDisabled={ true } FieldProvider={ FieldProvider }/>
     );
     expect(toJson(wrapper)).toMatchSnapshot();
   });

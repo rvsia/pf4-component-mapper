@@ -12,10 +12,22 @@ import {
   TextContent,
   Text,
   TextVariants,
+  Switch,
 } from '@patternfly/react-core';
 import { componentTypes } from '@data-driven-forms/react-form-renderer';
 
-const selectComponent = ({ componentType, input, options, isReadOnly, isDisabled, FieldProvider, isVisible, ...rest }) => ({
+const selectComponent = ({
+  componentType,
+  input,
+  options,
+  isReadOnly,
+  isDisabled,
+  FieldProvider,
+  isVisible,
+  onText,
+  offText,
+  ...rest
+}) => ({
   [componentTypes.TEXT_FIELD]: () => (
     <TextInput
       { ...input }
@@ -45,6 +57,14 @@ const selectComponent = ({ componentType, input, options, isReadOnly, isDisabled
           onChange={ () => { input.onChange(option.value); } } />) }
     />
   )),
+  [componentTypes.SWITCH]: () => <Switch
+    { ...rest }
+    { ...input }
+    onChange={ (element, state) => input.onChange(state) }
+    isChecked={ !!input.value }
+    isDisabled={ isDisabled || isReadOnly }
+    label={ rest.label }
+  />,
 })[componentType];
 
 const FinalFormField = ({
@@ -102,6 +122,7 @@ const fieldMapper = type => ({
   [componentTypes.TEXTAREA_FIELD]: FinalFormField,
   [componentTypes.CHECKBOX]: CheckboxGroupField,
   [componentTypes.RADIO]: FinalFormField,
+  [componentTypes.SWITCH]: FinalFormField,
 })[type];
 
 const FieldInterface = ({
@@ -132,6 +153,7 @@ FieldInterface.propTypes = {
     componentTypes.TEXTAREA_FIELD,
     componentTypes.TEXT_FIELD,
     componentTypes.DATE_PICKER,
+    componentTypes.SWITCH,
   ]).isRequired,
   id: PropTypes.string,
   name: PropTypes.string.isRequired,
@@ -146,3 +168,8 @@ export const RadioField = props => <FieldInterface { ...props } name={ props.inp
 export const SelectField = props => <FieldInterface { ...props } name={ props.input.name } componentType={ componentTypes.SELECT_COMPONENT } />;
 export const DatePickerField = props => <FieldInterface { ...props } name={ props.input.name } type="date" componentType={ componentTypes.TEXT_FIELD } />;
 export const TimePickerField = props => <FieldInterface { ...props } name={ props.input.name } type="time" componentType={ componentTypes.TEXT_FIELD } />;
+export const SwitchField = ({ FieldProvider, ...props }) =>
+  <FieldProvider
+    { ...props }
+    render={ props => <FieldInterface { ...props } hideLabel={ true } name={ props.input.name } componentType={ componentTypes.SWITCH } /> }
+  />;
