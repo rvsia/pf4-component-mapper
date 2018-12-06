@@ -1,7 +1,6 @@
 import { componentTypes, validatorTypes } from '@data-driven-forms/react-form-renderer';
 
 export const wizardSchema = {
-  formStyle: 'wizard',
   fields: [{
     component: componentTypes.WIZARD,
     name: 'wizzard',
