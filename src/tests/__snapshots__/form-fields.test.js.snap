@@ -845,6 +845,114 @@ exports[`FormFields should render Select correctly 1`] = `
 </SelectField>
 `;
 
+exports[`FormFields should render Switch correctly 1`] = `
+<SwitchField
+  FieldProvider={[Function]}
+  dataType="someDataType"
+  id="someIdKey"
+  input={
+    Object {
+      "name": "Name of the field",
+      "value": "",
+    }
+  }
+  meta={
+    Object {
+      "error": false,
+      "touched": false,
+    }
+  }
+>
+  <FieldProvider
+    dataType="someDataType"
+    id="someIdKey"
+    input={
+      Object {
+        "name": "Name of the field",
+        "value": "",
+      }
+    }
+    meta={
+      Object {
+        "error": false,
+        "touched": false,
+      }
+    }
+    render={[Function]}
+  >
+    <div>
+      <FieldInterface
+        componentType="switch-field"
+        dataType="someDataType"
+        hideLabel={true}
+        id="someIdKey"
+        input={
+          Object {
+            "name": "Name of the field",
+            "value": "",
+          }
+        }
+        meta={
+          Object {
+            "error": false,
+            "touched": false,
+          }
+        }
+        name="Name of the field"
+      >
+        <FormGroup
+          className=""
+          fieldId="someIdKey"
+          helperTextInvalid={false}
+          isInline={false}
+          isRequired={false}
+          isValid={true}
+          label={false}
+        >
+          <div
+            className="pf-c-form__group"
+          >
+            <Switch
+              aria-label=""
+              className=""
+              id="someIdKey"
+              isChecked={false}
+              isDisabled={false}
+              isValid={true}
+              label=""
+              name="Name of the field"
+              onChange={[Function]}
+              value=""
+            >
+              <label
+                className="pf-c-switch"
+                htmlFor="someIdKey"
+              >
+                <input
+                  aria-label=""
+                  checked={false}
+                  className="pf-c-switch__input"
+                  disabled={false}
+                  id="someIdKey"
+                  isValid={true}
+                  name="Name of the field"
+                  onChange={[Function]}
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  className="pf-c-switch__toggle"
+                />
+              </label>
+            </Switch>
+          </div>
+        </FormGroup>
+      </FieldInterface>
+    </div>
+  </FieldProvider>
+</SwitchField>
+`;
+
 exports[`FormFields should render TextArea correctly 1`] = `
 <TextAreaField
   dataType="someDataType"
@@ -1252,6 +1360,228 @@ exports[`FormFields should render TimePicker correctly 1`] = `
     </FormGroup>
   </FieldInterface>
 </TimePickerField>
+`;
+
+exports[`FormFields should render disabled Switch correctly 1`] = `
+<SwitchField
+  FieldProvider={[Function]}
+  dataType="someDataType"
+  id="someIdKey"
+  input={
+    Object {
+      "name": "Name of the field",
+      "value": "",
+    }
+  }
+  isDisabled={true}
+  meta={
+    Object {
+      "error": false,
+      "touched": false,
+    }
+  }
+>
+  <FieldProvider
+    dataType="someDataType"
+    id="someIdKey"
+    input={
+      Object {
+        "name": "Name of the field",
+        "value": "",
+      }
+    }
+    isDisabled={true}
+    meta={
+      Object {
+        "error": false,
+        "touched": false,
+      }
+    }
+    render={[Function]}
+  >
+    <div>
+      <FieldInterface
+        componentType="switch-field"
+        dataType="someDataType"
+        hideLabel={true}
+        id="someIdKey"
+        input={
+          Object {
+            "name": "Name of the field",
+            "value": "",
+          }
+        }
+        isDisabled={true}
+        meta={
+          Object {
+            "error": false,
+            "touched": false,
+          }
+        }
+        name="Name of the field"
+      >
+        <FormGroup
+          className=""
+          fieldId="someIdKey"
+          helperTextInvalid={false}
+          isInline={false}
+          isRequired={false}
+          isValid={true}
+          label={false}
+        >
+          <div
+            className="pf-c-form__group"
+          >
+            <Switch
+              aria-label=""
+              className=""
+              id="someIdKey"
+              isChecked={false}
+              isDisabled={true}
+              isValid={true}
+              label=""
+              name="Name of the field"
+              onChange={[Function]}
+              value=""
+            >
+              <label
+                className="pf-c-switch"
+                htmlFor="someIdKey"
+              >
+                <input
+                  aria-label=""
+                  checked={false}
+                  className="pf-c-switch__input"
+                  disabled={true}
+                  id="someIdKey"
+                  isValid={true}
+                  name="Name of the field"
+                  onChange={[Function]}
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  className="pf-c-switch__toggle"
+                />
+              </label>
+            </Switch>
+          </div>
+        </FormGroup>
+      </FieldInterface>
+    </div>
+  </FieldProvider>
+</SwitchField>
+`;
+
+exports[`FormFields should render disabled Switch correctly 2`] = `
+<SwitchField
+  FieldProvider={[Function]}
+  dataType="someDataType"
+  id="someIdKey"
+  input={
+    Object {
+      "name": "Name of the field",
+      "value": "",
+    }
+  }
+  isDisabled={true}
+  meta={
+    Object {
+      "error": false,
+      "touched": false,
+    }
+  }
+>
+  <FieldProvider
+    dataType="someDataType"
+    id="someIdKey"
+    input={
+      Object {
+        "name": "Name of the field",
+        "value": "",
+      }
+    }
+    isDisabled={true}
+    meta={
+      Object {
+        "error": false,
+        "touched": false,
+      }
+    }
+    render={[Function]}
+  >
+    <div>
+      <FieldInterface
+        componentType="switch-field"
+        dataType="someDataType"
+        hideLabel={true}
+        id="someIdKey"
+        input={
+          Object {
+            "name": "Name of the field",
+            "value": "",
+          }
+        }
+        isDisabled={true}
+        meta={
+          Object {
+            "error": false,
+            "touched": false,
+          }
+        }
+        name="Name of the field"
+      >
+        <FormGroup
+          className=""
+          fieldId="someIdKey"
+          helperTextInvalid={false}
+          isInline={false}
+          isRequired={false}
+          isValid={true}
+          label={false}
+        >
+          <div
+            className="pf-c-form__group"
+          >
+            <Switch
+              aria-label=""
+              className=""
+              id="someIdKey"
+              isChecked={false}
+              isDisabled={true}
+              isValid={true}
+              label=""
+              name="Name of the field"
+              onChange={[Function]}
+              value=""
+            >
+              <label
+                className="pf-c-switch"
+                htmlFor="someIdKey"
+              >
+                <input
+                  aria-label=""
+                  checked={false}
+                  className="pf-c-switch__input"
+                  disabled={true}
+                  id="someIdKey"
+                  isValid={true}
+                  name="Name of the field"
+                  onChange={[Function]}
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  className="pf-c-switch__toggle"
+                />
+              </label>
+            </Switch>
+          </div>
+        </FormGroup>
+      </FieldInterface>
+    </div>
+  </FieldProvider>
+</SwitchField>
 `;
 
 exports[`FormFields should render touched TextField id correctly 1`] = `
