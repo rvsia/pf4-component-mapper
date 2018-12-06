@@ -37,6 +37,25 @@ const devConfig = {
   plugins: [ htmlPlugin ],
 };
 
+const pfReactIcons = {
+  commonjs: '@patternfly/react-icons',
+  commonjs2: '@patternfly/react-icons',
+  amd: '@patternfly/react-icons',
+  root: 'PFReactIcons',
+};
+
+const pfReactCore = {
+  commonjs: '@patternfly/react-core',
+  commonjs2: '@patternfly/react-core',
+  amd: '@patternfly/react-core',
+  root: 'PFReactCore',
+};
+
+const externals = {
+  '@patternfly/react-core': pfReactCore,
+  '@patternfly/react-icons': pfReactIcons,
+};
+
 const prodConfig = {
   mode: 'production',
   entry: './src/index.js',
@@ -45,7 +64,9 @@ const prodConfig = {
     library: '[name]',
     libraryTarget: 'umd',
     filename: 'index.js',
+    umdNamedDefine: true,
   },
+  externals,
 };
 
 module.exports = env => ({
