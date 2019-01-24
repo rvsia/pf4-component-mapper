@@ -4,6 +4,7 @@ exports[`SubForm component should render SubForm correctly 1`] = `
 <Fragment>
   <Title
     className=""
+    headingLevel="h1"
     size="xl"
   >
     cosiTitle
@@ -18,6 +19,7 @@ exports[`SubForm component should render SubForm with description correctly 1`] 
 <Fragment>
   <Title
     className=""
+    headingLevel="h1"
     size="xl"
   >
     cosiTitle

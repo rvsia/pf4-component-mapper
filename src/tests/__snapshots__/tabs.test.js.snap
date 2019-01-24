@@ -6,6 +6,7 @@ exports[`Tabs component should render tabs correctly 1`] = `
 >
   <Title
     className=""
+    headingLevel="h1"
     size="3xl"
   >
     cosiTitle
