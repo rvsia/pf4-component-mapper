@@ -75,9 +75,23 @@ describe('FormFields', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
+  it('should render disabled Checkbox with options correctly', () => {
+    const wrapper = mount(
+      <CheckboxField { ...propsWithOptions } FieldProvider={ FieldProvider } disabled={ true }/>
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
   it('should render TextArea correctly', () => {
     const wrapper = mount(
       <TextAreaField { ...props } />
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('should render disabled TextArea correctly', () => {
+    const wrapper = mount(
+      <TextAreaField { ...props } isDisabled={ true } />
     );
     expect(toJson(wrapper)).toMatchSnapshot();
   });
@@ -89,9 +103,23 @@ describe('FormFields', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
+  it('should render disabled Radio correctly', () => {
+    const wrapper = mount(
+      <RadioField { ...propsWithOptions } FieldProvider={ FieldProvider } disabled={ true } />
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
   it('should render Select correctly', () => {
     const wrapper = mount(
       <SelectField { ...propsWithOptions } />
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('should render disabled Select correctly', () => {
+    const wrapper = mount(
+      <SelectField { ...propsWithOptions } isDisabled={ true } />
     );
     expect(toJson(wrapper)).toMatchSnapshot();
   });

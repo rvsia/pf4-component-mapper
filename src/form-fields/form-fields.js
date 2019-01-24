@@ -36,13 +36,14 @@ const selectComponent = ({
       isDisabled={ isDisabled }
     />
   ),
-  [componentTypes.TEXTAREA_FIELD]: () => <TextArea { ...input } { ...rest } />,
+  [componentTypes.TEXTAREA_FIELD]: () => <TextArea disabled={ isDisabled || isReadOnly } { ...input } { ...rest } />,
   [componentTypes.SELECT_COMPONENT]: () => (
-    <Select { ...input } { ...rest }>
+    <Select { ...input } { ...rest } isDisabled={ isDisabled || isReadOnly }>
       { options.map(props => (<SelectOption key={ props.value || props.label } { ...props } label={ props.label.toString() }/>)) }
     </Select>
   ),
-  [componentTypes.CHECKBOX]: () =>  <Checkbox { ...input } label={ rest.title || rest.label } aria-label={ rest.name } { ...rest }/>,
+  [componentTypes.CHECKBOX]: () =>
+    <Checkbox { ...input } label={ rest.title || rest.label } aria-label={ rest.name } { ...rest } isDisabled={ isDisabled || isReadOnly }/>,
   [componentTypes.RADIO]: () => options.map(option => (
     <FieldProvider
       key={ `${input.name}-${option.value}` }
@@ -54,6 +55,7 @@ const selectComponent = ({
           label={ option.label }
           id={ `${input.name}-${option.value}` }
           aria-label={ option.label }
+          isDisabled={ isDisabled || isReadOnly }
           onChange={ () => { input.onChange(option.value); } } />) }
     />
   )),
