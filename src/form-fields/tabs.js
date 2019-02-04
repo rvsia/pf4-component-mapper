@@ -1,14 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Title } from '@patternfly/react-core';
+import { Tabs, Tab } from '@patternfly/react-core';
 
-const FormTabs = ({ fields, formOptions }) =>
-  fields.map(({ key, fields, title, name }) => (
-    <React.Fragment key={ key || name }>
-      <Title size="3xl">{ title }</Title>
-      { formOptions.renderForm(fields, formOptions) }
-    </React.Fragment>
+class FormTabs extends React.Component {
+  state = {
+    activeTabKey: 0,
+  };
+
+  // Toggle currently active tab
+  handleTabClick = (event, tabIndex) => {
+    event.preventDefault();
+    this.setState({
+      activeTabKey: tabIndex,
+    });
+  };
+
+  renderTabItems = (fields, formOptions) => fields.map(({ key, fields, title, name }, index) => (
+    <Tab key={ key || name } eventKey={ index } title={ title }>
+      <div className='pf-c-form'>
+        { formOptions.renderForm(fields, formOptions) }
+      </div>
+    </Tab>
   ));
+
+  render() {
+    const { fields, formOptions, dataType, FieldProvider, ...rest } = this.props;
+    return <Tabs activeKey={ this.state.activeTabKey } onSelect={ this.handleTabClick } { ...rest }>
+      { this.renderTabItems(fields, formOptions) }
+    </Tabs>
+    ;}
+}
 
 FormTabs.propTypes = {
   fields: PropTypes.array.isRequired,

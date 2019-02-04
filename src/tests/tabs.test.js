@@ -1,7 +1,7 @@
 import React from 'react';
 import toJson from 'enzyme-to-json';
 import Tabs from '../form-fields/tabs';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Tabs component', () => {
   const props = {
@@ -10,6 +10,12 @@ describe('Tabs component', () => {
         key: 'cosiKey',
         title: 'cosiTitle',
         name: 'cosiName',
+        fields: [],
+      },
+      {
+        key: 'cosiKey2',
+        title: 'cosiTitle2',
+        name: 'cosiName2',
         fields: [],
       },
     ],
@@ -24,5 +30,15 @@ describe('Tabs component', () => {
       </Tabs>
     );
     expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('should switch tabs correctly', () => {
+    const wrapper = mount(<Tabs { ...props } />);
+    expect(wrapper.instance().state.activeTabKey).toEqual(0);
+
+    const secondTabButton = wrapper.find('[className="pf-c-tabs__button"]').at(1);
+    secondTabButton.simulate('click');
+
+    expect(wrapper.instance().state.activeTabKey).toEqual(1);
   });
 });
