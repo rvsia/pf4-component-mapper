@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import MultipleChoiceList from './multiple-choice-list';
 import {
   TextInput,
-  Select,
+  FormSelect,
   Radio,
-  SelectOption,
+  FormSelectOption,
   Checkbox,
   TextArea,
   FormGroup,
@@ -38,9 +38,9 @@ const selectComponent = ({
   ),
   [componentTypes.TEXTAREA_FIELD]: () => <TextArea disabled={ isDisabled || isReadOnly } { ...input } { ...rest } />,
   [componentTypes.SELECT_COMPONENT]: () => (
-    <Select { ...input } { ...rest } isDisabled={ isDisabled || isReadOnly }>
-      { options.map(props => (<SelectOption key={ props.value || props.label } { ...props } label={ props.label.toString() }/>)) }
-    </Select>
+    <FormSelect { ...input } { ...rest } isDisabled={ isDisabled || isReadOnly }>
+      { options.map(props => (<FormSelectOption key={ props.value || props.label } { ...props } label={ props.label.toString() }/>)) }
+    </FormSelect>
   ),
   [componentTypes.CHECKBOX]: () =>
     <Checkbox { ...input } label={ rest.title || rest.label } aria-label={ rest.name } { ...rest } isDisabled={ isDisabled || isReadOnly }/>,
