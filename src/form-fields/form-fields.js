@@ -59,14 +59,16 @@ const selectComponent = ({
           onChange={ () => { input.onChange(option.value); } } />) }
     />
   )),
-  [componentTypes.SWITCH]: () => <Switch
-    { ...rest }
-    { ...input }
-    onChange={ (element, state) => input.onChange(state) }
-    isChecked={ !!input.value }
-    isDisabled={ isDisabled || isReadOnly }
-    label={ rest.label }
-  />,
+  [componentTypes.SWITCH]: () => {
+    const { formOptions, isValid, ...newRest } = rest;
+    return <Switch
+      { ...newRest }
+      { ...input }
+      onChange={ (element, state) => input.onChange(state) }
+      isChecked={ !!input.value }
+      isDisabled={ isDisabled || isReadOnly }
+      label={ rest.label }
+    />;},
 })[componentType];
 
 const FinalFormField = ({
