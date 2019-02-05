@@ -582,7 +582,7 @@ exports[`FormFields should render Radio correctly 1`] = `
               >
                 <input
                   aria-invalid={false}
-                  aria-label="One"
+                  aria-label={null}
                   className="pf-c-check__input"
                   disabled={false}
                   id="Foo-1"
@@ -624,7 +624,7 @@ exports[`FormFields should render Radio correctly 1`] = `
               >
                 <input
                   aria-invalid={false}
-                  aria-label="Two"
+                  aria-label={null}
                   className="pf-c-check__input"
                   disabled={false}
                   id="Foo-2"
@@ -666,7 +666,7 @@ exports[`FormFields should render Radio correctly 1`] = `
               >
                 <input
                   aria-invalid={false}
-                  aria-label="Three"
+                  aria-label={null}
                   className="pf-c-check__input"
                   disabled={false}
                   id="Foo-3"
@@ -768,7 +768,7 @@ exports[`FormFields should render Select correctly 1`] = `
       <div
         className="pf-c-form__group"
       >
-        <Select
+        <FormSelect
           aria-label={null}
           className=""
           id="someIdKey"
@@ -792,7 +792,7 @@ exports[`FormFields should render Select correctly 1`] = `
             onFocus={[Function]}
             value=""
           >
-            <SelectOption
+            <FormSelectOption
               className=""
               isDisabled={false}
               key="1"
@@ -806,8 +806,8 @@ exports[`FormFields should render Select correctly 1`] = `
               >
                 One
               </option>
-            </SelectOption>
-            <SelectOption
+            </FormSelectOption>
+            <FormSelectOption
               className=""
               isDisabled={false}
               key="2"
@@ -821,8 +821,8 @@ exports[`FormFields should render Select correctly 1`] = `
               >
                 Two
               </option>
-            </SelectOption>
-            <SelectOption
+            </FormSelectOption>
+            <FormSelectOption
               className=""
               isDisabled={false}
               key="3"
@@ -836,9 +836,9 @@ exports[`FormFields should render Select correctly 1`] = `
               >
                 Three
               </option>
-            </SelectOption>
+            </FormSelectOption>
           </select>
-        </Select>
+        </FormSelect>
       </div>
     </FormGroup>
   </FieldInterface>
@@ -918,7 +918,6 @@ exports[`FormFields should render Switch correctly 1`] = `
               id="someIdKey"
               isChecked={false}
               isDisabled={false}
-              isValid={true}
               label=""
               name="Name of the field"
               onChange={[Function]}
@@ -934,7 +933,6 @@ exports[`FormFields should render Switch correctly 1`] = `
                   className="pf-c-switch__input"
                   disabled={false}
                   id="someIdKey"
-                  isValid={true}
                   name="Name of the field"
                   onChange={[Function]}
                   type="checkbox"
@@ -1771,7 +1769,7 @@ exports[`FormFields should render disabled Radio correctly 1`] = `
               >
                 <input
                   aria-invalid={false}
-                  aria-label="One"
+                  aria-label={null}
                   className="pf-c-check__input"
                   disabled={false}
                   id="Foo-1"
@@ -1813,7 +1811,7 @@ exports[`FormFields should render disabled Radio correctly 1`] = `
               >
                 <input
                   aria-invalid={false}
-                  aria-label="Two"
+                  aria-label={null}
                   className="pf-c-check__input"
                   disabled={false}
                   id="Foo-2"
@@ -1855,7 +1853,7 @@ exports[`FormFields should render disabled Radio correctly 1`] = `
               >
                 <input
                   aria-invalid={false}
-                  aria-label="Three"
+                  aria-label={null}
                   className="pf-c-check__input"
                   disabled={false}
                   id="Foo-3"
@@ -1959,7 +1957,7 @@ exports[`FormFields should render disabled Select correctly 1`] = `
       <div
         className="pf-c-form__group"
       >
-        <Select
+        <FormSelect
           aria-label={null}
           className=""
           id="someIdKey"
@@ -1983,7 +1981,7 @@ exports[`FormFields should render disabled Select correctly 1`] = `
             onFocus={[Function]}
             value=""
           >
-            <SelectOption
+            <FormSelectOption
               className=""
               isDisabled={false}
               key="1"
@@ -1997,8 +1995,8 @@ exports[`FormFields should render disabled Select correctly 1`] = `
               >
                 One
               </option>
-            </SelectOption>
-            <SelectOption
+            </FormSelectOption>
+            <FormSelectOption
               className=""
               isDisabled={false}
               key="2"
@@ -2012,8 +2010,8 @@ exports[`FormFields should render disabled Select correctly 1`] = `
               >
                 Two
               </option>
-            </SelectOption>
-            <SelectOption
+            </FormSelectOption>
+            <FormSelectOption
               className=""
               isDisabled={false}
               key="3"
@@ -2027,9 +2025,9 @@ exports[`FormFields should render disabled Select correctly 1`] = `
               >
                 Three
               </option>
-            </SelectOption>
+            </FormSelectOption>
           </select>
-        </Select>
+        </FormSelect>
       </div>
     </FormGroup>
   </FieldInterface>
@@ -2112,7 +2110,6 @@ exports[`FormFields should render disabled Switch correctly 1`] = `
               id="someIdKey"
               isChecked={false}
               isDisabled={true}
-              isValid={true}
               label=""
               name="Name of the field"
               onChange={[Function]}
@@ -2128,7 +2125,6 @@ exports[`FormFields should render disabled Switch correctly 1`] = `
                   className="pf-c-switch__input"
                   disabled={true}
                   id="someIdKey"
-                  isValid={true}
                   name="Name of the field"
                   onChange={[Function]}
                   type="checkbox"
@@ -2223,7 +2219,6 @@ exports[`FormFields should render disabled Switch correctly 2`] = `
               id="someIdKey"
               isChecked={false}
               isDisabled={true}
-              isValid={true}
               label=""
               name="Name of the field"
               onChange={[Function]}
@@ -2239,7 +2234,6 @@ exports[`FormFields should render disabled Switch correctly 2`] = `
                   className="pf-c-switch__input"
                   disabled={true}
                   id="someIdKey"
-                  isValid={true}
                   name="Name of the field"
                   onChange={[Function]}
                   type="checkbox"

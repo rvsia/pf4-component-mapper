@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import MultipleChoiceList from './multiple-choice-list';
 import {
   TextInput,
-  Select,
+  FormSelect,
   Radio,
-  SelectOption,
+  FormSelectOption,
   Checkbox,
   TextArea,
   FormGroup,
@@ -38,9 +38,9 @@ const selectComponent = ({
   ),
   [componentTypes.TEXTAREA_FIELD]: () => <TextArea disabled={ isDisabled || isReadOnly } { ...input } { ...rest } />,
   [componentTypes.SELECT_COMPONENT]: () => (
-    <Select { ...input } { ...rest } isDisabled={ isDisabled || isReadOnly }>
-      { options.map(props => (<SelectOption key={ props.value || props.label } { ...props } label={ props.label.toString() }/>)) }
-    </Select>
+    <FormSelect { ...input } { ...rest } isDisabled={ isDisabled || isReadOnly }>
+      { options.map(props => (<FormSelectOption key={ props.value || props.label } { ...props } label={ props.label.toString() }/>)) }
+    </FormSelect>
   ),
   [componentTypes.CHECKBOX]: () =>
     <Checkbox { ...input } label={ rest.title || rest.label } aria-label={ rest.name } { ...rest } isDisabled={ isDisabled || isReadOnly }/>,
@@ -59,14 +59,16 @@ const selectComponent = ({
           onChange={ () => { input.onChange(option.value); } } />) }
     />
   )),
-  [componentTypes.SWITCH]: () => <Switch
-    { ...rest }
-    { ...input }
-    onChange={ (element, state) => input.onChange(state) }
-    isChecked={ !!input.value }
-    isDisabled={ isDisabled || isReadOnly }
-    label={ rest.label }
-  />,
+  [componentTypes.SWITCH]: () => {
+    const { formOptions, isValid, ...newRest } = rest;
+    return <Switch
+      { ...newRest }
+      { ...input }
+      onChange={ (element, state) => input.onChange(state) }
+      isChecked={ !!input.value }
+      isDisabled={ isDisabled || isReadOnly }
+      label={ rest.label }
+    />;},
 })[componentType];
 
 const FinalFormField = ({
