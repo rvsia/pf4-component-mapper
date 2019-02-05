@@ -1,18 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tabs component should render tabs correctly 1`] = `
-<Fragment
-  key="cosiKey"
+<Tabs
+  activeKey={0}
+  className=""
+  isFilled={false}
+  isSecondary={false}
+  leftScrollAriaLabel="Scroll left"
+  onSelect={[Function]}
+  rightScrollAriaLabel="Scroll Right"
 >
-  <Title
+  <Tab
     className=""
-    headingLevel="h1"
-    size="3xl"
+    eventKey={0}
+    key="cosiKey"
+    title="cosiTitle"
   >
-    cosiTitle
-  </Title>
-  <div>
-    Here would be form
-  </div>
-</Fragment>
+    <div
+      className="pf-c-form"
+    >
+      <div>
+        Here would be form
+      </div>
+    </div>
+  </Tab>
+  <Tab
+    className=""
+    eventKey={1}
+    key="cosiKey2"
+    title="cosiTitle2"
+  >
+    <div
+      className="pf-c-form"
+    >
+      <div>
+        Here would be form
+      </div>
+    </div>
+  </Tab>
+</Tabs>
 `;
