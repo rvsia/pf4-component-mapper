@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { layoutComponents } from '@data-driven-forms/react-form-renderer';
-import { Form, Toolbar, ToolbarGroup, ToolbarItem, Button, ActionGroup, Grid } from '@patternfly/react-core';
+import { Form, Toolbar, ToolbarGroup, ToolbarItem, Button, ActionGroup, Grid, TextContent, Text, TextVariants } from '@patternfly/react-core';
 import { PlusIcon, CloseIcon } from '@patternfly/react-icons';
 import './layout-components-styles.scss';
 
@@ -70,6 +70,28 @@ HelpBlockLayout.propTypes = {
   ]),
 };
 
+const Title = ({ children }) => <TextContent>
+  <Text component={ TextVariants.h1 }>{ children }</Text>
+</TextContent>;
+
+Title.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
+
+const Description = ({ children }) => <TextContent>
+  <Text component={ TextVariants.p }>{ children }</Text>
+</TextContent>;
+
+Description.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
+
 const layoutMapper = {
   [layoutComponents.FORM_WRAPPER]: Form,
   [layoutComponents.BUTTON]: ButtonLayout,
@@ -79,6 +101,8 @@ const layoutMapper = {
   [layoutComponents.ICON]: Icon,
   [layoutComponents.ARRAY_FIELD_WRAPPER]: ArrayFieldLayout,
   [layoutComponents.HELP_BLOCK]: HelpBlockLayout,
+  [layoutComponents.TITLE]: Title,
+  [layoutComponents.DESCRIPTION]: Description,
 };
 
 export default layoutMapper;
