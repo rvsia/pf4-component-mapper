@@ -46,6 +46,7 @@ const selectComponent = ({
     <Checkbox { ...input } label={ rest.title || rest.label } aria-label={ rest.name } { ...rest } isDisabled={ isDisabled || isReadOnly }/>,
   [componentTypes.RADIO]: () => options.map(option => (
     <FieldProvider
+      {...rest}
       key={ `${input.name}-${option.value}` }
       name={ input.name }
       value={ option.value }
@@ -83,7 +84,6 @@ const FinalFormField = ({
 }) => {
   const { error, touched } = meta;
   const showError = touched && error;
-
   return (
     <FormGroup
       isRequired={ isRequired }

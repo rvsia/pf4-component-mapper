@@ -29,12 +29,13 @@ const MultipleChoiceList = ({ validate, FieldProvider, ...props }) => (
         <FormGroup label={ label } fieldId={ rest.id || rest.key || rest.name } isValid={ showError } >
           { options.map(option =>
             (<FieldProvider
+              {...rest}
               id={ `${rest.id}-${option.value}` }
               key={ option.value }
               { ...option }
               name={ props.name }
               type="checkbox"
-              render={ ({ input, meta, ...rest }) => {
+              render={ ({ input, meta, formOptions, componentType, ...rest }) => {
                 const indexValue = groupValues.indexOf(input.value);
                 return (
                   <Checkbox
